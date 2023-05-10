@@ -7,6 +7,7 @@ class ProductManager {
 
     //agrego un nuevo producto
     async addProduct(title, description, price, thumbnail, code, stock) {
+
         let products = await this.getProducts();
 
         const newProduct = {
@@ -37,6 +38,7 @@ class ProductManager {
 
     //metodo para ver todos los productos
     async getProducts() {
+
         //leo el archivo donde estan guardados los productos
         let dbProducts = await fs.promises.readFile(this.path);
         //parseo dbProducts
@@ -47,6 +49,7 @@ class ProductManager {
 
     //metodo para buscar un producto de acuerdo a su ID
     async getProductsByID(el) {
+
         let products = await this.getProducts();
 
         //busco si existe el valor proporcionado en el parametro
@@ -61,6 +64,7 @@ class ProductManager {
 
     //metodo para actualizar alguna clave del poducto seleccionado por su id
     async updateProduct(id, keyToChange, newValue) {
+
         let products = await this.getProducts();
         //busco si existe el id y guardo su indice si existe
         let searchIndex = await products.findIndex(product => product.id === id);
@@ -79,6 +83,7 @@ class ProductManager {
 
     //metodo para eliminar un producto a partir de su id
     async deletePoduct(id) {
+
         let products = await this.getProducts();
         let searchIndex = await products.findIndex(product => product.id === id);
         if (searchIndex !== -1) {
@@ -96,20 +101,22 @@ class ProductManager {
 let producto = new ProductManager;
 
 //AGREGA UN NUEVO PRODUCTO
-producto.addProduct("Manzana", "Esta es la descripcion de una manzana", 400, "Foto de una manzana", 4263, 83)
-//producto.addProduct("Sandia", "Esta es la descripcion de una sandida", '450', "Foto de una sandia", 4454, 150);//--> este no va a agregar el producto porque el price no tiene el formato correcto
+//producto.addProduct("Naranja", "Esta es la descripcion de una Naranja", 500, "Foto de una naranja", 4264, 183)
+//producto.addProduct("Uva", "Esta es la descripcion de una uva", 540, "Foto de una uva", 4154, 450);//--> este no va a agregar el producto porque el price no tiene el formato correcto
 //producto.addProduct("Manzana", "Esta es la descripcion de una manzana", 500, "Foto de una manzana", 4263, 21); //--> este addProduct dara error por repetir el codigo
-producto.addProduct("Mandarina", "Esta es la descripcion de una mandarina", 255, "Foto de una mandarina", 2059, 100);
+//producto.addProduct("Frutilla", "Esta es la descripcion de una frutilla", 380, "Foto de una frutilla", 5874, 700);
 
 //MUESTRA TODA LA LISTA DE PRODUCTOS
 //console.table(await producto.getProducts());
 
 //BUSCA UN PRODUCTO MEDIANTE SU ID
-//console.log( await producto.getProductsByID(2))
+//console.log(await producto.getProductsByID(5))
 
 //CAMBIA EL VALOR DE UN PRODUCTO MEDIANTE SU ID, SU CLAVE Y EL VALOR NUEVO DE LA CLAVE A CAMBIAR
 //let cambiar = await producto.updateProduct(4, "title", "Durazno")
 //console.log(cambiar)
 
 //ELIMINA UN PRODUCTO DE LA LISTA A PARTIR DE SU ID
-//console.log(await producto.deletePoduct(1));
+//console.log(await producto.deletePoduct(4));
+
+export default ProductManager;

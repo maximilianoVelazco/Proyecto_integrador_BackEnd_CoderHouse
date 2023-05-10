@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Manzana",
+		"description": "Esta es la descripcion de una manzana",
+		"price": 400,
+		"thumbnail": "Foto de una manzana",
+		"code": 4263,
+		"stock": 83,
+		"id": 1
+	},
+	{
+		"title": "Mandarina",
+		"description": "Esta es la descripcion de una mandarina",
+		"price": 255,
+		"thumbnail": "Foto de una mandarina",
+		"code": 2059,
+		"stock": 100,
+		"id": 2
+	},
+	{
+		"title": "Banana",
+		"description": "Esta es la descripcion de una Banana",
+		"price": 380,
+		"thumbnail": "Foto de una banana",
+		"code": 4895,
+		"stock": 100,
+		"id": 3
+	},
+	{
+		"title": "Frutilla",
+		"description": "Esta es la descripcion de una frutilla",
+		"price": 380,
+		"thumbnail": "Foto de una frutilla",
+		"code": 5874,
+		"stock": 700,
+		"id": 4
+	},
+	{
+		"title": "Naranja",
+		"description": "Esta es la descripcion de una Naranja",
+		"price": 500,
+		"thumbnail": "Foto de una naranja",
+		"code": 4264,
+		"stock": 183,
+		"id": 5
+	},
+	{
+		"title": "Sandia",
+		"description": "Esta es la descripcion de una sandida",
+		"price": 450,
+		"thumbnail": "Foto de una sandia",
+		"code": 4454,
+		"stock": 150,
+		"id": 6
+	},
+	{
+		"title": "Pera",
+		"description": "Esta es la descripcion de una pera",
+		"price": 450,
+		"thumbnail": "Foto de una pera",
+		"code": 3454,
+		"stock": 150,
+		"id": 7
+	},
+	{
+		"title": "Anana",
+		"description": "Esta es la descripcion de un anana",
+		"price": 750,
+		"thumbnail": "Foto de un anana",
+		"code": 3754,
+		"stock": 450,
+		"id": 8
+	},
+	{
+		"title": "Ciruela",
+		"description": "Esta es la descripcion de una ciruela",
+		"price": 750,
+		"thumbnail": "Foto de una ciruela",
+		"code": 5754,
+		"stock": 450,
+		"id": 9
+	},
+	{
+		"title": "Uva",
+		"description": "Esta es la descripcion de una uva",
+		"price": 540,
+		"thumbnail": "Foto de una uva",
+		"code": 4154,
+		"stock": 450,
+		"id": 10
+	}
+]
