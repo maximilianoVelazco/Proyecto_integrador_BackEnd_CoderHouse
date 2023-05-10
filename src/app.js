@@ -11,7 +11,7 @@ app.get('/products', async (req, res) =>{
     res.send(productos);
 })
 
-app.get('/products', async (req, res) =>{
+app.get('/products/limited', async (req, res) =>{
     let productos = await productManager.getProducts();
     let { limit } = req.query;
     let acotarProductos = limit ? productos.slice(0, limit) : productos;
